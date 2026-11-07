@@ -108,6 +108,7 @@
     showErrors(errs);
     var firstBad = Object.keys(errs)[0];
     if (firstBad) {
+      form.classList.remove("shake"); void form.offsetWidth; form.classList.add("shake");
       fields[firstBad].focus();
       status.textContent = "Periksa kembali data yang belum lengkap.";
       return;

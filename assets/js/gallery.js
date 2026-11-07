@@ -43,6 +43,7 @@
     if (!visible.length) return;
     current = (i + visible.length) % visible.length;
     var btn = visible[current];
+    img.classList.remove("swap"); void img.offsetWidth; img.classList.add("swap");
     img.src = btn.getAttribute("data-src");
     img.alt = btn.getAttribute("data-alt") || "";
     cap.textContent = (current + 1) + " / " + visible.length + " · " + (btn.getAttribute("data-alt") || "");

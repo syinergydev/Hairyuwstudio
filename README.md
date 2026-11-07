@@ -39,7 +39,9 @@ Dipertahankan dari situs yang sudah berjalan (screenshot di arsip): tombol tema 
 
 Fitur tambahan: pencarian layanan, pilih layanan dari halaman layanan langsung ke form booking, validasi form dan pratinjau pesan WhatsApp, salin pesan dan salin alamat, lightbox dengan navigasi keyboard dan geser sentuh, tombol WhatsApp mengambang, tombol kembali ke atas, tema terang/gelap yang diingat, JSON-LD untuk SEO lokal, sitemap, robots.txt, Open Graph, dan dukungan `prefers-reduced-motion`.
 
-Palet warna: hijau hutan, krem hangat, dan aksen tembaga. Tema terang sebagai default, tema gelap memakai hijau hutan dalam (bukan hitam). Font: Bricolage Grotesque untuk judul dan DM Sans untuk teks. Keduanya dimuat dari Google Fonts.
+Palet warna: merah barber (#C8102E), navy (#1B2B45), krem hangat (#F7F1E5), dan biru pole. Tanpa hitam dan emas. Tema terang sebagai default, tema gelap memakai navy. Font: Bricolage Grotesque untuk judul dan DM Sans untuk teks.
+
+Animasi: hero full-image dengan zoom perlahan dan judul yang naik bertahap, marquee layanan, garis progres bergaris barber di atas, header transparan di atas hero, reveal saat scroll dengan jeda berurutan, penghitung rating, parallax pada band, galeri geser horizontal, lightbox dengan transisi, efek hover kartu dan tombol, tombol WhatsApp berdenyut, transisi antar halaman, dan form yang bergetar jika ada error. Semua animasi dimatikan jika pengguna mengaktifkan "kurangi gerakan" di perangkat.
 
 Logo tidak diubah, tidak dipotong bagian tulisannya, dan tidak diganti dengan foto. Logo hanya diberi latar putih agar tetap terbaca di kedua tema.
 

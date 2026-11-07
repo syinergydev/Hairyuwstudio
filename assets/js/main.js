@@ -1,17 +1,18 @@
-/* Hairyuw Studio — script utama: tema, menu mobile, header, tombol atas, salin, tahun */
+/* Hairyuw Studio — script utama: tema, menu mobile, header, progress, transisi halaman, salin, tahun */
 (function () {
   "use strict";
   var root = document.documentElement;
   root.classList.add("js");
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  /* Tema terang / gelap (default gelap) */
+  /* Tema terang (default) / gelap navy */
   var KEY = "hy-theme";
   function applyTheme(t) {
     root.setAttribute("data-theme", t);
     var btn = document.querySelector("[data-theme-toggle]");
-    if (btn) btn.setAttribute("aria-label", t === "light" ? "Ganti ke tema gelap" : "Ganti ke tema terang");
+    if (btn) btn.setAttribute("aria-label", t === "dark" ? "Ganti ke tema terang" : "Ganti ke tema gelap");
     var m = document.querySelector('meta[name="theme-color"]');
-    if (m) m.setAttribute("content", t === "light" ? "#F5F1E8" : "#13302A");
+    if (m) m.setAttribute("content", t === "dark" ? "#142238" : "#F7F1E5");
   }
   var saved = null;
   try { saved = localStorage.getItem(KEY); } catch (e) {}
@@ -19,8 +20,9 @@
   var themeBtn = document.querySelector("[data-theme-toggle]");
   if (themeBtn) {
     themeBtn.addEventListener("click", function () {
-      var next = root.getAttribute("data-theme") === "light" ? "dark" : "light";
+      var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
       applyTheme(next);
+      themeBtn.classList.remove("spin"); void themeBtn.offsetWidth; themeBtn.classList.add("spin");
       try { localStorage.setItem(KEY, next); } catch (e) {}
     });
   }
@@ -35,36 +37,56 @@
       toggle.setAttribute("aria-label", open ? "Tutup menu" : "Buka menu");
     });
     nav.addEventListener("click", function (e) {
-      if (e.target.tagName === "A") {
-        nav.classList.remove("open");
-        toggle.setAttribute("aria-expanded", "false");
-      }
+      if (e.target.tagName === "A") { nav.classList.remove("open"); toggle.setAttribute("aria-expanded", "false"); }
     });
     document.addEventListener("keydown", function (e) {
       if (e.key === "Escape" && nav.classList.contains("open")) {
-        nav.classList.remove("open");
-        toggle.setAttribute("aria-expanded", "false");
-        toggle.focus();
+        nav.classList.remove("open"); toggle.setAttribute("aria-expanded", "false"); toggle.focus();
       }
     });
   }
 
-  /* Bayangan header saat scroll + tombol ke atas */
+  /* Header: transparan di atas hero, solid saat scroll; progress garis barber; tombol atas */
   var header = document.querySelector(".site-header");
+  var hasHero = !!document.querySelector(".hero-full");
+  var progress = document.querySelector(".progress");
   var topBtn = document.querySelector("[data-to-top]");
+  var ticking = false;
   function onScroll() {
+    ticking = false;
     var y = window.scrollY || 0;
-    if (header) header.classList.toggle("scrolled", y > 10);
+    var max = (document.documentElement.scrollHeight - window.innerHeight) || 1;
+    if (progress) progress.style.transform = "scaleX(" + Math.min(1, y / max) + ")";
+    if (header) {
+      header.classList.toggle("scrolled", y > 10);
+      header.classList.toggle("over-hero", hasHero && y < 40);
+    }
     if (topBtn) topBtn.classList.toggle("show", y > 600);
   }
-  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("scroll", function () {
+    if (!ticking) { ticking = true; requestAnimationFrame(onScroll); }
+  }, { passive: true });
+  window.addEventListener("resize", onScroll);
   onScroll();
   if (topBtn) topBtn.addEventListener("click", function () {
-    var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
   });
 
-  /* Salin teks (alamat) */
+  /* Transisi halaman: fade out sebelum pindah ke halaman lain di situs ini */
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest("a[href]");
+    if (!a || a.target === "_blank" || e.metaKey || e.ctrlKey || e.shiftKey) return;
+    var href = a.getAttribute("href");
+    if (!href || href.charAt(0) === "#" || href.indexOf("mailto:") === 0 || href.indexOf("http") === 0 || href.indexOf("tel:") === 0) return;
+    if (!/\.html(\?|#|$)/.test(href) && href.indexOf("?") === -1) return;
+    if (reduce) return;
+    e.preventDefault();
+    document.body.classList.add("leaving");
+    setTimeout(function () { window.location.href = href; }, 260);
+  });
+  window.addEventListener("pageshow", function () { document.body.classList.remove("leaving"); });
+
+  /* Salin teks */
   document.querySelectorAll("[data-copy]").forEach(function (btn) {
     var original = btn.textContent;
     btn.addEventListener("click", function () {
@@ -75,14 +97,10 @@
       };
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(text).then(function () { done(true); }, function () { done(false); });
-      } else {
-        done(false);
-      }
+      } else { done(false); }
     });
   });
 
-  /* Tahun otomatis di footer */
-  document.querySelectorAll("[data-year]").forEach(function (el) {
-    el.textContent = new Date().getFullYear();
-  });
+  /* Tahun di footer */
+  document.querySelectorAll("[data-year]").forEach(function (el) { el.textContent = new Date().getFullYear(); });
 })();

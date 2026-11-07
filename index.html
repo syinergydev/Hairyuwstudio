@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Hairyuw Studio Barbershop Mojokerto | Haircut &amp; Hair Styling</title>
   <meta name="description" content="Hairyuw Studio Barbershop di Jl. Raya Penanggungan, Mojokerto. Konsultasi sebelum haircut, pelayanan ramah, ramah anak, dan booking via WhatsApp.">
-  <meta name="theme-color" content="#F5F1E8">
+  <meta name="theme-color" content="#F7F1E5">
   <link rel="canonical" href="https://hairyuw-studio.netlify.app/">
   <link rel="icon" type="image/png" sizes="64x64" href="assets/logo/favicon-64.png">
   <link rel="icon" type="image/png" sizes="512x512" href="assets/logo/favicon-512.png">
@@ -46,6 +46,7 @@
 </head>
 <body>
 <a class="skip-link" href="#main">Lewati ke konten</a>
+<div class="progress" aria-hidden="true"></div>
 <header class="site-header" id="top">
   <div class="container nav-wrap">
     <a class="brand" href="index.html" aria-label="Hairyuw Studio, kembali ke beranda">
@@ -72,26 +73,32 @@
 </header>
 <main id="main">
 
-<section class="hero">
-  <div class="container hero-grid">
-    <div class="hero-copy">
-      <p class="eyebrow">Barbershop Mojokerto &middot; Est. 2023</p>
-      <h1>LOOK SHARP.<br><span class="gold">FEEL CONFIDENT.</span></h1>
-      <p class="lead">Temukan gaya rambut yang sesuai dengan karakter Anda bersama Hairyuw Studio. Nikmati pelayanan yang ramah, konsultasi sebelum haircut, dan hasil potongan yang lebih personal.</p>
-      <div class="btn-row">
-        <a class="btn btn-ghost" href="layanan.html">Lihat Layanan <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" class="ic ic-arrow"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-        <a class="btn btn-primary" href="booking.html">Booking WhatsApp</a>
-      </div>
-      <div class="rating-chip" aria-label="Rating Google 5,0 dari 211 ulasan">
-        <span class="stars" aria-hidden="true">★★★★★</span>
-        <span><strong>5,0</strong> &middot; 211 ulasan di Google Maps</span>
-      </div>
+<section class="hero-full" id="beranda">
+  <div class="hero-bg" aria-hidden="true">
+    <img src="assets/img/gallery/hero-full.webp" alt="Interior Hairyuw Studio dengan deretan kursi barber" width="1600" height="900" fetchpriority="high">
+  </div>
+  <div class="hero-shade" aria-hidden="true"></div>
+  <div class="container">
+    <p class="eyebrow">Barbershop Mojokerto &middot; Est. 2023</p>
+    <h1>
+      <span class="line"><span style="--i:0">LOOK SHARP.</span></span>
+      <span class="line"><span style="--i:1" class="accent">FEEL CONFIDENT.</span></span>
+    </h1>
+    <p class="lead">Temukan gaya rambut yang sesuai dengan karakter Anda bersama Hairyuw Studio. Nikmati pelayanan yang ramah, konsultasi sebelum haircut, dan hasil potongan yang lebih personal.</p>
+    <div class="btn-row">
+      <a class="btn btn-hero-ghost" href="layanan.html">Lihat Layanan <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" class="ic ic-arrow"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a class="btn btn-primary" href="booking.html">Booking WhatsApp</a>
     </div>
-    <div class="hero-media">
-      <img src="assets/img/gallery/suasana-1.webp" alt="Interior Hairyuw Studio dengan deretan kursi barber" width="1200" height="675" fetchpriority="high">
+    <div class="rating-chip" aria-label="Rating Google 5,0 dari 211 ulasan">
+      <span class="stars" aria-hidden="true">★★★★★</span>
+      <span><strong><span data-count data-to="5" data-dec="1">5,0</span></strong> &middot; <span data-count data-to="211" data-dec="0">211</span> ulasan di Google Maps</span>
     </div>
   </div>
+  <a class="scroll-cue" href="#marquee" aria-label="Gulir ke bawah"></a>
+  <div class="pole" aria-hidden="true"></div>
 </section>
+
+<div class="marquee" id="marquee" aria-hidden="true"><div class="track"><span>Men&#x27;s Haircut</span><span>Premium Haircut</span><span>Konsultasi</span><span>Basic Colour</span><span>Keratin Treatment</span><span>Homecare Service</span><span>Haircut Anak</span><span>Design Perm</span><span>Men&#x27;s Haircut</span><span>Premium Haircut</span><span>Konsultasi</span><span>Basic Colour</span><span>Keratin Treatment</span><span>Homecare Service</span><span>Haircut Anak</span><span>Design Perm</span></div></div>
 
 <section class="section" id="keunggulan">
   <div class="container">
@@ -100,17 +107,31 @@
       <h2>Pelayanan yang terasa personal</h2>
       <p>Hal-hal yang paling sering disebut pelanggan di Google Maps.</p>
     </header>
-    <div class="feature-grid"><article class="card feature reveal">
-          <span class="feature-ic"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5h16v11H9l-5 4V5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
-          <h3>Konsultasi sebelum haircut</h3><p>Diskusi gaya dan kebutuhan rambut sebelum mulai dipotong.</p></article><article class="card feature reveal">
-          <span class="feature-ic"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 14c1 1.5 2.3 2.2 4 2.2s3-.7 4-2.2M9 9.5h.01M15 9.5h.01" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
-          <h3>Pelayanan ramah</h3><p>Pelanggan menyoroti pelayanan yang ramah dan nyaman sejak datang.</p></article><article class="card feature reveal">
-          <span class="feature-ic"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="3.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M5 20c0-3.9 3.1-6.5 7-6.5s7 2.6 7 6.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
-          <h3>Ramah untuk anak</h3><p>Melayani haircut anak dengan suasana yang tenang dan ramah.</p></article><article class="card feature reveal">
-          <span class="feature-ic"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 20V9l9-5 9 5v11M9 20v-6h6v6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
-          <h3>Tempat luas dan nyaman</h3><p>Ruang yang lapang dengan kursi barber yang nyaman.</p></article><article class="card feature reveal">
-          <span class="feature-ic"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="6" cy="6" r="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="6" cy="18" r="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 7.5L20 17M8 16.5L20 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+    <div class="feature-grid"><article class="card feature reveal zoom">
+          <span class="feature-ic"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5h16v11H9l-5 4V5z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></span>
+          <h3>Konsultasi sebelum haircut</h3><p>Diskusi gaya dan kebutuhan rambut sebelum mulai dipotong.</p></article><article class="card feature reveal zoom">
+          <span class="feature-ic"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8 14c1 1.5 2.3 2.2 4 2.2s3-.7 4-2.2M9 9.5h.01M15 9.5h.01" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
+          <h3>Pelayanan ramah</h3><p>Pelanggan menyoroti pelayanan yang ramah dan nyaman sejak datang.</p></article><article class="card feature reveal zoom">
+          <span class="feature-ic"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M5 20c0-3.9 3.1-6.5 7-6.5s7 2.6 7 6.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
+          <h3>Ramah untuk anak</h3><p>Melayani haircut anak dengan suasana yang tenang dan ramah.</p></article><article class="card feature reveal zoom">
+          <span class="feature-ic"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 20V9l9-5 9 5v11M9 20v-6h6v6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></span>
+          <h3>Tempat luas dan nyaman</h3><p>Ruang yang lapang dengan kursi barber yang nyaman.</p></article><article class="card feature reveal zoom">
+          <span class="feature-ic"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="6" cy="6" r="2.5" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="6" cy="18" r="2.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8 7.5L20 17M8 16.5L20 7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
           <h3>Hasil yang diperhatikan detail</h3><p>Setiap potongan dikerjakan dengan perhatian pada detail.</p></article></div>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="band-title">
+  <div class="band-bg" aria-hidden="true"><img src="assets/img/gallery/band-proses.webp" alt="Pelanggan sedang dilayani di kursi barber Hairyuw Studio" width="2000" height="1130" loading="lazy" decoding="async"></div>
+  <div class="band-shade" aria-hidden="true"></div>
+  <div class="container reveal from-left">
+    <p class="eyebrow">Proses pelayanan</p>
+    <h2 id="band-title">Konsultasi dulu, lalu potong dengan detail</h2>
+    <p>Setiap kunjungan dimulai dengan ngobrol tentang gaya yang Anda inginkan. Setelah itu baru kami mulai bekerja, dengan perhatian pada setiap sisi potongan.</p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="layanan.html">Lihat layanan &amp; harga</a>
+      <a class="btn btn-hero-ghost" href="galeri.html">Lihat galeri</a>
+    </div>
   </div>
 </section>
 
@@ -142,7 +163,19 @@
   </div>
 </section>
 
-<section class="section" id="video">
+<section class="section" id="galeri-preview">
+  <div class="container">
+    <header class="section-head reveal">
+      <p class="eyebrow">Galeri</p>
+      <h2>Hasil haircut asli</h2>
+      <p>Geser untuk melihat hasil potongan dari Hairyuw Studio.</p>
+    </header>
+  </div>
+  <div class="strip reveal" aria-label="Galeri hasil haircut"><figure><img src="assets/img/gallery/pria-2.webp" alt="Fade, tampak samping" width="1080" height="1200" loading="lazy" decoding="async"><figcaption>Fade, tampak samping</figcaption></figure><figure><img src="assets/img/gallery/anak-5.webp" alt="Haircut anak dengan fade" width="1080" height="1200" loading="lazy" decoding="async"><figcaption>Haircut anak dengan fade</figcaption></figure><figure><img src="assets/img/gallery/pria-5.webp" alt="Gaya quiff" width="1080" height="1200" loading="lazy" decoding="async"><figcaption>Gaya quiff</figcaption></figure><figure><img src="assets/img/gallery/anak-2.webp" alt="Haircut anak" width="1080" height="1200" loading="lazy" decoding="async"><figcaption>Haircut anak</figcaption></figure><figure><img src="assets/img/gallery/pria-3.webp" alt="Gelombang, tampak belakang" width="1080" height="1200" loading="lazy" decoding="async"><figcaption>Gelombang, tampak belakang</figcaption></figure><figure><img src="assets/img/gallery/proses-1.webp" alt="Proses pelayanan" width="1080" height="1200" loading="lazy" decoding="async"><figcaption>Proses pelayanan</figcaption></figure><figure><img src="assets/img/gallery/pria-6.webp" alt="Gaya rapi" width="1080" height="1200" loading="lazy" decoding="async"><figcaption>Gaya rapi</figcaption></figure><figure><img src="assets/img/gallery/anak-7.webp" alt="Fade anak" width="1080" height="1200" loading="lazy" decoding="async"><figcaption>Fade anak</figcaption></figure></div>
+  <div class="center-cta reveal"><a class="btn btn-ghost" href="galeri.html">Lihat galeri lengkap <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" class="ic ic-arrow"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+</section>
+
+<section class="section section-alt" id="video">
   <div class="container">
     <header class="section-head reveal">
       <p class="eyebrow">Di balik layar</p>
@@ -150,14 +183,14 @@
       <p>Video dokumentasi singkat. Tekan play untuk menonton, suara tidak diputar otomatis.</p>
     </header>
     <div class="video-row">
-      <figure class="video-card reveal">
+      <figure class="video-card reveal from-left">
         <video controls preload="none" poster="assets/video/tour-barbershop-poster.webp" playsinline aria-label="Tur singkat Hairyuw Studio">
           <source src="assets/video/tour-barbershop.mp4" type="video/mp4">
           Browser Anda tidak mendukung video.
         </video>
         <figcaption>Tur singkat Hairyuw Studio</figcaption>
       </figure>
-      <figure class="video-card reveal">
+      <figure class="video-card reveal from-right">
         <video controls preload="none" poster="assets/video/layanan-homecare-poster.webp" playsinline aria-label="Layanan homecare Hairyuw Studio">
           <source src="assets/video/layanan-homecare.mp4" type="video/mp4">
           Browser Anda tidak mendukung video.
@@ -168,30 +201,18 @@
   </div>
 </section>
 
-<section class="section section-alt" id="galeri-preview">
-  <div class="container">
-    <header class="section-head reveal">
-      <p class="eyebrow">Galeri</p>
-      <h2>Hasil haircut asli</h2>
-      <p>Dokumentasi hasil potongan dari Hairyuw Studio.</p>
-    </header>
-    <div class="shot-grid"><figure class="shot reveal"><img src="assets/img/gallery/pria-2.webp" alt="Hasil haircut pria dengan fade, tampak samping" width="1080" height="1080" loading="lazy" decoding="async"></figure><figure class="shot reveal"><img src="assets/img/gallery/pria-5.webp" alt="Hasil haircut pria dengan gaya quiff" width="1080" height="1080" loading="lazy" decoding="async"></figure><figure class="shot reveal"><img src="assets/img/gallery/anak-5.webp" alt="Hasil haircut anak dengan fade" width="1080" height="1080" loading="lazy" decoding="async"></figure><figure class="shot reveal"><img src="assets/img/gallery/pria-6.webp" alt="Hasil haircut pria dengan gaya rapi" width="1080" height="1080" loading="lazy" decoding="async"></figure></div>
-    <div class="center-cta reveal"><a class="btn btn-ghost" href="galeri.html">Lihat galeri lengkap <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" class="ic ic-arrow"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
-  </div>
-</section>
-
 <section class="section">
   <div class="container split">
-    <div class="reveal">
+    <div class="reveal from-left">
       <p class="eyebrow">Ulasan</p>
       <h2>Dinilai 5,0 oleh pelanggan</h2>
-      <p>Dari 211 ulasan di Google Maps, pelanggan sering menyebut pelayanan yang ramah, konsultasi sebelum potong, keramahan terhadap anak, serta hasil haircut yang memuaskan.</p>
+      <p class="lead">Dari 211 ulasan di Google Maps, pelanggan sering menyebut pelayanan yang ramah, konsultasi sebelum potong, keramahan terhadap anak, serta hasil haircut yang memuaskan.</p>
       <a class="btn btn-ghost" href="ulasan.html">Baca ringkasan ulasan <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" class="ic ic-arrow"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
-    <div class="cta-box reveal">
+    <div class="cta-box reveal from-right">
       <h3>Siap tampil lebih rapi?</h3>
       <p>Pilih layanan, tentukan tanggal dan jam, lalu kirim lewat WhatsApp. Booking menunggu konfirmasi dari kami.</p>
-      <a class="btn btn-primary" href="booking.html">Booking via WhatsApp</a>
+      <div class="btn-row"><a class="btn btn-primary" href="booking.html">Booking via WhatsApp</a></div>
     </div>
   </div>
 </section>
