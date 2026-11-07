@@ -35,11 +35,13 @@ robots.txt, sitemap.xml
 
 ## Fitur
 
-Dipertahankan dari situs yang sudah berjalan (screenshot di arsip): tampilan gelap dengan tombol tema, menu layanan per kategori, bagian "Inspirasi Gaya", tautan booking, dan tautan Instagram.
+Dipertahankan dari situs yang sudah berjalan (screenshot di arsip): tombol tema terang/gelap, menu layanan per kategori, bagian "Inspirasi Gaya", tautan booking, dan tautan Instagram.
 
 Fitur tambahan: pencarian layanan, pilih layanan dari halaman layanan langsung ke form booking, validasi form dan pratinjau pesan WhatsApp, salin pesan dan salin alamat, lightbox dengan navigasi keyboard dan geser sentuh, tombol WhatsApp mengambang, tombol kembali ke atas, tema terang/gelap yang diingat, JSON-LD untuk SEO lokal, sitemap, robots.txt, Open Graph, dan dukungan `prefers-reduced-motion`.
 
-Logo tidak diubah, tidak dipotong bagian tulisannya, dan tidak diganti dengan foto. Logo hanya diberi latar putih agar tetap terbaca di tema gelap.
+Palet warna: hijau hutan, krem hangat, dan aksen tembaga. Tema terang sebagai default, tema gelap memakai hijau hutan dalam (bukan hitam). Font: Bricolage Grotesque untuk judul dan DM Sans untuk teks. Keduanya dimuat dari Google Fonts.
+
+Logo tidak diubah, tidak dipotong bagian tulisannya, dan tidak diganti dengan foto. Logo hanya diberi latar putih agar tetap terbaca di kedua tema.
 
 ## Menjalankan lokal
 

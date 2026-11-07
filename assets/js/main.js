@@ -11,11 +11,11 @@
     var btn = document.querySelector("[data-theme-toggle]");
     if (btn) btn.setAttribute("aria-label", t === "light" ? "Ganti ke tema gelap" : "Ganti ke tema terang");
     var m = document.querySelector('meta[name="theme-color"]');
-    if (m) m.setAttribute("content", t === "light" ? "#F7F6F2" : "#101010");
+    if (m) m.setAttribute("content", t === "light" ? "#F5F1E8" : "#13302A");
   }
   var saved = null;
   try { saved = localStorage.getItem(KEY); } catch (e) {}
-  applyTheme(saved === "light" ? "light" : "dark");
+  applyTheme(saved === "dark" ? "dark" : "light");
   var themeBtn = document.querySelector("[data-theme-toggle]");
   if (themeBtn) {
     themeBtn.addEventListener("click", function () {
